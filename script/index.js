@@ -42,8 +42,16 @@ $(document).ready(() => {
         return result;
     }
 
+    const remove = () => {
+        let arr = [];
+        arr = text.split("");
+        arr.pop();
+        text = arr.join().replace(/,/g, '');
+        return text;
+    }
+
     $(".btn").click(function() {
-        $(".result").empty();
+        $(".result").empty(); 
         $(".window").append(`${$(this).text()}`);
         text = $(".window").text(); 
     });
@@ -51,5 +59,15 @@ $(document).ready(() => {
     $(".btn-equal").click(function() {
         $(".window").text('');
         $(".result").html(calc());
-    })
+    });
+
+    $(".btn-clear").click(function() {
+        $(".window").text('');
+        $(".result").empty();
+    });
+
+    $(".btn-remove").click(function() {
+        $(".window").html(remove());
+        $(".result").empty();
+    });
 });
