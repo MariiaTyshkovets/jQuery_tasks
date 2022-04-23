@@ -49,7 +49,7 @@ $(document).ready(() => {
     });
 
     $(".btn-equal").click(function() {
-        $(".window").text(``);
-        $(".result").text(`${calc()}`);
+        $(".window").text('');
+        $(".result").html(calc());
     })
 });
