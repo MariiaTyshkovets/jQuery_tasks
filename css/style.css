@@ -12,6 +12,11 @@ button, .tab {
     background-color: rgb(215, 105, 215);
 }
 
+img {
+    width: auto;
+    height: 100%;
+}
+
 .test-wrapper {
     width: 30vw;
     height: 30vh;
@@ -21,15 +26,14 @@ button, .tab {
 }
 
 .tabs {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .tab-box {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100vw;
     background-color: darkmagenta;
     height: 60px;
     margin: 0;
@@ -46,17 +50,13 @@ button, .tab {
     align-items: center;   
 }
 
-.tab-item {
+.calc, .sld {
     display: none;
-}
-
-div.tab-item:first-child {
-    display: block;
 }
 
 .calc {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 110px);
     background-image: url("https://img5.goodfon.ru/wallpaper/nbig/8/b3/wood-siren-tsvety-belaia-rozovaia-fon.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -114,4 +114,51 @@ h2 {
 
 .btn:active, .btn-equal:active, .btn-remove:active, .btn-clear:active {
     box-shadow: 3px 3px 4px rgb(57, 4, 57);   
+}
+
+.sld {
+    background-image: url("https://st2.depositphotos.com/8865038/48214/i/450/depositphotos_482148632-stock-photo-beautiful-gentle-abstract-circle-shaped.jpg?forcejpeg=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 60px);
+}
+
+.slider-block {
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.slider-block h2 {
+    margin-top: 0;
+}
+
+.slider-block h4 {
+    font-weight: normal;
+    text-align: center;
+}
+
+.slides {
+    padding-top: 30px;
+}
+
+.slide {
+    margin: 0 10px;
+    height: 300px;
+}
+
+.slick-prev {
+    left: -35px;
+}
+
+.slick-prev, .slick-next {
+    top: 53%;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+}
+
+.slick-prev:before, .slick-next:before, .slick-dots li.slick-active button:before, .slick-dots li button:before {
+    color: rgb(57, 4, 57);
 }

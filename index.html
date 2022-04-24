@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <title>jQuery</title>
 </head>
@@ -11,8 +13,8 @@
     <div id="tabs" class="tabs">
         <ul class="tab-box">
             <li class="tab">First section</li>
-            <li class="tab">Second section</li>
-            <li class="tab">Third section</li>
+            <li class="tab">Calculator</li>
+            <li class="tab">Slick slider</li>
         </ul>
         <div class="tab-item">
             <div class="test-wrapper">
@@ -26,8 +28,8 @@
                 <span class="result"></span>
                 <div class="btns">
                     <button class="btn-clear">C</button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
+                    <div></div>
+                    <div></div>
                     <button class="btn-remove">&#129052;</button>
                     <button class="btn">1</button>
                     <button class="btn">2</button>
@@ -48,11 +50,41 @@
                 </div>
             </div>
         </div>
-        <div class="tab-item">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique dolorem ipsa vero quia consequatur fuga tempora quisquam impedit animi, pariatur officiis suscipit accusamus architecto qui repellat cum minima!</p>
+        <div class="tab-item sld">
+            <section class="slider-block">
+                <h2>Beautiful pictures</h2>
+                <h4>This collection of cute pictures is designed to relax your brain and relax. Enjoy!</h4>
+                <div class="variable-width slides">
+                    <div class="slide">
+                        <img src="https://klike.net/uploads/posts/2019-01/medium/1547367940_5.jpg" alt="A cat">
+                    </div>
+                    <div class="slide">
+                        <img src="https://klike.net/uploads/posts/2019-01/medium/1547367988_6.jpg" alt="Two ducks">
+                    </div>
+                    <div class="slide">
+                        <img src="https://klike.net/uploads/posts/2019-01/medium/1547367971_10.jpg" alt="A gray cute cat">
+                    </div>
+                    <div class="slide">
+                        <img src="https://klike.net/uploads/posts/2019-01/medium/1547368053_17.jpg" alt="A butterfly">
+                    </div>
+                    <div class="slide">
+                        <img src="https://assets.puzzlefactory.com/puzzle/260/793/original.jpg" alt="A kitten">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.nur.kz/images/1120x630/df76c4c0e52e1d9d.jpeg" alt="A rabbit">
+                    </div>
+                    <div class="slide">
+                        <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/475B/production/_98776281_gettyimages-521697453.jpg" alt="A dog">
+                    </div>
+                    <div class="slide">
+                        <img src="https://funart.pro/uploads/posts/2021-07/1626366409_19-funart-pro-p-samie-milie-zhivotnie-na-planete-zhivotnie-22.jpg" alt="Animal">
+                    </div>
+                </div>
+            </section>
         </div>
-      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./script/index.js"></script>
 </body>
 </html>
