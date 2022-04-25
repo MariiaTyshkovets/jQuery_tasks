@@ -18,8 +18,8 @@ img {
 }
 
 .test-wrapper {
-    width: 30vw;
-    height: 30vh;
+    width: 70%;
+    height: auto;
     background-color: rgb(215, 105, 215);
     margin: 50px auto;
     padding: 30px;
@@ -33,10 +33,12 @@ img {
 .tab-box {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     background-color: darkmagenta;
-    height: 60px;
+    min-height: 60px;
     margin: 0;
+    padding: 0 20px;
 }
 
 .tab {
@@ -44,13 +46,15 @@ img {
     padding: 0 10px;
     border: 2px solid rgb(57, 4, 57);
     border-radius: 5px;
-    margin: 0 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 5px 5px;
     height: 30px;
     display: flex;
     align-items: center;   
 }
 
-.calc, .sld {
+.calc, .sld, .ajax {
     display: none;
 }
 
@@ -90,6 +94,7 @@ h2 {
     border: 2px solid rgb(57, 4, 57);
     margin-bottom: 20px;
     padding: 5px;
+    overflow: hidden;
 }
 
 .result {
@@ -152,7 +157,7 @@ h2 {
 }
 
 .slick-prev, .slick-next {
-    top: 53%;
+    top: 54%;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -162,3 +167,23 @@ h2 {
 .slick-prev:before, .slick-next:before, .slick-dots li.slick-active button:before, .slick-dots li button:before {
     color: rgb(57, 4, 57);
 }
+
+.ajax {
+    background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v983batch2-021-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=489c3a6e89103a3d56dde9d999f46098');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 60px);
+    padding-top: 50px;
+}
+
+.ajax table {
+    margin: 0 auto;
+}
+
+.ajax th {
+    text-transform: uppercase;
+}
+
+.ajax td {
+    padding: 0 5px;
+} 
