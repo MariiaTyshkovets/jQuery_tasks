@@ -10,36 +10,7 @@ $(document).ready(() => {
     let lastBtnText = "";
     
     const calc = () => {
-        let arr = [];
-        let result = null;
-        if (text.includes("+")) {
-            arr = text.split("+");
-            for (let i = 0; i < arr.length; i++) {
-                result += +arr[i];
-                console.log(arr[i]);
-            }
-        }
-        if (text.includes("-")) {
-            arr = text.split("-");
-            result = +arr[0]
-            for (let i = 1; i < arr.length; i++) {
-                result -= +arr[i] ;
-            }
-        }
-        if (text.includes("/")) {
-            arr = text.split("/");
-            result = +arr[0];
-            for (let i = 1; i < arr.length; i++) {
-                result /= +arr[i];
-            }
-        }
-        if (text.includes("*")) {
-            arr = text.split("*");
-            result = +arr[0];
-            for (let i = 1; i < arr.length; i++) {
-                result *= +arr[i];
-            }
-        } 
+        let result = eval(text); 
         return result;
     }
 
