@@ -89,12 +89,13 @@ h2 {
 .window {
     width: 225px;
     height: 15%;
-    background-color: rgb(215, 105, 215);
+    background-color: rgb(244, 154, 244);
     border-radius: 5px;
     border: 2px solid rgb(57, 4, 57);
     margin-bottom: 20px;
     padding: 5px;
     overflow: hidden;
+    box-shadow: 3px 3px 4px rgb(57, 4, 57) inset; 
 }
 
 .result {
@@ -115,10 +116,11 @@ h2 {
     border-radius: 5px;
     font-size: 30px;  
     border: 2px solid rgb(57, 4, 57);
+    box-shadow: 3px 3px 4px rgb(57, 4, 57); 
 }
 
 .btn:active, .btn-equal:active, .btn-remove:active, .btn-clear:active {
-    box-shadow: 3px 3px 4px rgb(57, 4, 57);   
+    box-shadow: none;   
 }
 
 .sld {
@@ -177,7 +179,15 @@ h2 {
 }
 
 .ajax table {
+    min-width: 1300px;
     margin: 0 auto;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .ajax th {
@@ -185,5 +195,5 @@ h2 {
 }
 
 .ajax td {
-    padding: 0 5px;
+    padding: 5px 5px;
 } 

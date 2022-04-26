@@ -10,7 +10,11 @@ $(document).ready(() => {
     let lastBtnText = "";
     
     const calc = () => {
+        if (operator(lastBtnText)) {
+            $(".window").html(remove());
+        }
         let result = eval(text); 
+        $(".window").text('');
         return result;
     }
 
@@ -67,13 +71,17 @@ $(document).ready(() => {
     fetch(`${API}/users`)
     .then(response => response.json())
     .then(users => {
-        const ajax = document.getElementsByClassName('ajax')[0];
+        const container = document.getElementsByClassName('container')[0];
         const table = document.createElement('TABLE');
+        const thead = document.createElement('THEAD');
+        const tbody = document.createElement('TBODY');
         const userThemes = document.createElement('TR'); 
-        ajax.appendChild(table);
-        table.appendChild(userThemes);
+        container.appendChild(table);
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        thead.appendChild(userThemes);
         userThemes.innerHTML = "<th>id</th>" + "<th>name</th>" + "<th>username</th>" + "<th>email</th>" + "<th>citi</th>" + "<th>phone</th>" + "<th>website</th>" + "<th>company</th>";
-        users.forEach(user => table.appendChild(getUsers(user)));
+        users.forEach(user => tbody.appendChild(getUsers(user)));
     })
     .catch(error => console.log(error));
 
