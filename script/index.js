@@ -126,11 +126,8 @@ $(document).ready(() => {
         const form = event.currentTarget;
             
         const url = form.action;
-        const formData = new FormData();
-        formData.append("first_name", form.name.value);
-        formData.append("last_name", form.surname.value);
-        formData.append("email", form.email.value);
-        formData.append("password", form.password.value);
+        const formData = new FormData(form);
+       
         const formDataJSON = JSON.stringify(Object.fromEntries(formData));
         console.log(formDataJSON);
 
