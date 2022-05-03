@@ -5,7 +5,6 @@ $(document).ready(() => {
         $(".tab-item").hide().eq($(this).index()).fadeIn()
     }).eq(0).addClass("active");
     
-    // Калькулятор поки зроблений на одну дію, або якщо використовувати один той самий оператор декілька разів. Наприклад, 1+2, або 1*3*4.
     let text = "";
     let lastBtnText = "";
     
@@ -64,7 +63,7 @@ $(document).ready(() => {
         variableWidth: true
     });
 
-    // AJAX
+    // AJAX:get
 
     const API = 'https://jsonplaceholder.typicode.com';
 
@@ -80,7 +79,7 @@ $(document).ready(() => {
         table.appendChild(thead);
         table.appendChild(tbody);
         thead.appendChild(userThemes);
-        userThemes.innerHTML = "<th>id</th>" + "<th>name</th>" + "<th>username</th>" + "<th>email</th>" + "<th>citi</th>" + "<th>phone</th>" + "<th>website</th>" + "<th>company</th>";
+        userThemes.innerHTML = "<th>id</th>" + "<th>name</th>" + "<th>username</th>" + "<th>email</th>" + "<th>city</th>" + "<th>phone</th>" + "<th>website</th>" + "<th>company</th>";
         users.forEach(user => tbody.appendChild(getUsers(user)));
     })
     .catch(error => console.log(error));
@@ -116,4 +115,40 @@ $(document).ready(() => {
 
         return userPost;
     }
+
+    // AJAX:post
+    // Опрацюй форму, перетвори всі отримані дані в JSON рядок
+
+    $("#form").submit(function(event){
+        
+        event.preventDefault();
+
+        const form = event.currentTarget;
+            
+        const url = form.action;
+        const formData = new FormData();
+        formData.append("first_name", form.name.value);
+        formData.append("last_name", form.surname.value);
+        formData.append("email", form.email.value);
+        formData.append("password", form.password.value);
+        const formDataJSON = JSON.stringify(Object.fromEntries(formData));
+        console.log(formDataJSON);
+
+        fetch(url, {
+            method: "POST",
+            body: formDataJSON,
+            headers: {"Content-Type":"application/json"}
+        })
+        .then((result) => {
+            if (result.status != 201) { throw new Error("Bad Server Response"); }
+            return result.text();
+        })
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((error) => { 
+            console.log(error); 
+        })
+        return false;
+    }); 
 });

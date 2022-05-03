@@ -15,7 +15,8 @@
             <li class="tab">First section</li>
             <li class="tab">Calculator</li>
             <li class="tab">Slick slider</li>
-            <li class="tab">AJAX</li>
+            <li class="tab">AJAX:get</li>
+            <li class="tab">AJAX:post</li>
         </ul>
         <div class="tab-item">
             <div class="test-wrapper">
@@ -87,6 +88,24 @@
             <div class="container">
                 
             </div>
+        </div>
+        <div class="tab-item ajax">
+           <div class="block-container">
+               <form action="https://reqres.in/api/users" method="post" id="form">
+                    <label for="name">Name:</label><br>
+                    <input type="text" placeholder="Enter the name" name="name"><br>
+                    <label for="surname">Surname:</label><br>
+                    <input type="text" placeholder="Enter the surname" name="surname"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" placeholder="Enter the email" name="email"><br>
+                    <br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" placeholder="Enter the password" name="password"><br>
+                    <label for="repassword">Password confirmation:</label><br>
+                    <input type="password" placeholder="Re-enter the password" name="repassword"><br>
+                    <button type="submit" class="btn-submit">Submit</button>
+               </form>
+           </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

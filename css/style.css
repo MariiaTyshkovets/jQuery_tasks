@@ -197,3 +197,35 @@ h2 {
 .ajax td {
     padding: 5px 5px;
 } 
+
+.block-container {
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(57, 4, 57);
+    font-size: 20px;
+}
+
+.block-container label {
+    line-height: 1.7;
+}
+
+.block-container input {
+    font-size: 20px;
+    width: 97%;
+}
+
+.btn-submit {
+    font-size: 20px;
+    background-color: white;
+    margin-top: 20px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(57, 4, 57);
+    box-shadow: 2px 2px 4px darkmagenta;
+}
+
+.btn-submit:active {
+    box-shadow: none;
+}
