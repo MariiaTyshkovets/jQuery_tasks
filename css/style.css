@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+button, .tab {
+    cursor: pointer;
+}
+
+.active { 
+    background-color: rgb(215, 105, 215);
+}
+
+img {
+    width: auto;
+    height: 100%;
+}
+
+.test-wrapper {
+    width: 70%;
+    height: auto;
+    background-color: rgb(215, 105, 215);
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.tabs {
+    height: 100%;
+    width: 100%;
+}
+
+.tab-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: darkmagenta;
+    min-height: 60px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.tab {
+    list-style-type: none;
+    padding: 0 10px;
+    border: 2px solid rgb(57, 4, 57);
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 5px 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;   
+}
+
+.calc, .sld, .ajax {
+    display: none;
+}
+
+.calc {
+    width: 100%;
+    height: calc(100vh - 110px);
+    background-image: url("https://img5.goodfon.ru/wallpaper/nbig/8/b3/wood-siren-tsvety-belaia-rozovaia-fon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+}
+
+.calc-wrapper {
+    width: 240px;
+    height: 330px;
+    background-color: darkmagenta;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 25px;
+    box-shadow: 4px 6px 12px 4px rgb(209, 128, 209);
+    position: relative;
+    font-size: 22px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(57, 4, 57);
+    text-shadow: rgb(215, 105, 215) 1px 0 10px;
+}
+
+.window {
+    width: 225px;
+    height: 15%;
+    background-color: rgb(244, 154, 244);
+    border-radius: 5px;
+    border: 2px solid rgb(57, 4, 57);
+    margin-bottom: 20px;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: 3px 3px 4px rgb(57, 4, 57) inset; 
+}
+
+.result {
+    position: absolute;
+    top: 53px;
+    right: 35px;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn, .btn-equal, .btn-remove, .btn-clear {
+    background-color: rgb(215, 105, 215);
+    border-radius: 5px;
+    font-size: 30px;  
+    border: 2px solid rgb(57, 4, 57);
+    box-shadow: 3px 3px 4px rgb(57, 4, 57); 
+}
+
+.btn:active, .btn-equal:active, .btn-remove:active, .btn-clear:active {
+    box-shadow: none;   
+}
+
+.sld {
+    background-image: url("https://st2.depositphotos.com/8865038/48214/i/450/depositphotos_482148632-stock-photo-beautiful-gentle-abstract-circle-shaped.jpg?forcejpeg=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 60px);
+}
+
+.slider-block {
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.slider-block h2 {
+    margin-top: 0;
+}
+
+.slider-block h4 {
+    font-weight: normal;
+    text-align: center;
+}
+
+.slides {
+    padding-top: 30px;
+}
+
+.slide {
+    margin: 0 10px;
+    height: 300px;
+}
+
+.slick-prev {
+    left: -35px;
+}
+
+.slick-prev, .slick-next {
+    top: 54%;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+}
+
+.slick-prev:before, .slick-next:before, .slick-dots li.slick-active button:before, .slick-dots li button:before {
+    color: rgb(57, 4, 57);
+}
+
+.ajax {
+    background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v983batch2-021-x.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=489c3a6e89103a3d56dde9d999f46098');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 60px);
+    padding-top: 50px;
+}
+
+.ajax table {
+    min-width: 1300px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.ajax th {
+    text-transform: uppercase;
+}
+
+.ajax td {
+    padding: 5px 5px;
+} 
+
+.block-container {
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(57, 4, 57);
+    font-size: 20px;
+}
+
+.block-container label {
+    line-height: 1.7;
+}
+
+.block-container input {
+    font-size: 20px;
+    width: 97%;
+}
+
+.btn-submit {
+    font-size: 20px;
+    background-color: white;
+    margin-top: 20px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(57, 4, 57);
+    box-shadow: 2px 2px 4px darkmagenta;
+}
+
+.btn-submit:active {
+    box-shadow: none;
+}
